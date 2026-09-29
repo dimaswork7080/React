@@ -1,14 +1,20 @@
 import Actions from "./Actions";
 
-function Post({ author, title, text }) {
+function Post({ author, title, text, onDelete, id }) {
     return (
         <div>
             <article className="post">
-                <h2>{title}</h2>
+                <div className="te">
+                    <h2>{title}</h2>
+                    <button className="delete-button" onClick={() => onDelete(id)}>
+                        X
+                    </button>
+                </div>
                 <p className="post-text">{text}</p>
                 <p className="post-author">Author: {author}</p>
                 <Actions />
             </article>
+
         </div>
     );
 }

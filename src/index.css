@@ -181,8 +181,7 @@ main {
   height: 55px;
   display: flex;
   align-items: center;
-  background: black;
-  color: white;
+  border: 1px solid black;
   border-radius: 50%;
   font-size: 24px;
   font-weight: bold;
@@ -200,15 +199,10 @@ main {
 /* POST */
 .post {
   padding: 25px 0;
-  border-bottom: 1px solid white;
-}
-
-.post:last-child {
-  border-bottom: none;
+  border-bottom: 1px solid rgb(180, 180, 180);
 }
 
 .post h2 {
-  margin: 0 0 10px;
   color: black;
   line-height: 1.6;
 }
@@ -250,4 +244,55 @@ main {
 }
 .actions button:active{
   transform: translateY(0);
+}
+
+.post-form{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: #eeeeee;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.post-form button{
+  background-color: #dddddd;
+  border: 2px solid #999;
+  padding: 10px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-weight: 900;
+  transform: translate(0px, 0px);
+  transition: translate 2s ease;
+}
+
+.post-form button:hover{
+  background-color: #bebebe;
+  transform: translate(100px, 50px);
+  transform: scale(2);
+  transition: transform 2s ease, background-color 2s ease;
+}
+
+.post-form textarea{
+  resize: none;
+  height: 150px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.post-form input{
+  padding: 10px;
+  border: 2px solid #999;
+  border-radius: 10px;
+}
+
+.te{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.delete-button:hover{
+  background-color: red;
 }

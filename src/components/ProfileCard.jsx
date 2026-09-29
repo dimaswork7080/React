@@ -33,13 +33,13 @@ function ProfileCard() {
             title: "Пост 5",
             text: "Текст 5"
         }
-        
+
     ]);
 
     const [title, setTitle] = useState('');
     const [text, setText] = useState("");
 
-    function addPost(e){
+    function addPost(e) {
         e.preventDefault();
 
         const newPost = {
@@ -55,10 +55,16 @@ function ProfileCard() {
         setText("");
     }
 
+    function deletePost(id) {
+        setPosts(
+            posts.filter((post) => post.id !== id)
+        );
+    }
+
     return (
         <section className="profile-card">
             <div className="profile">
-                <div className="avatar">avatar</div>
+                <img src="src/assets/cat.jpg" alt="" className="avatar"></img>
                 <div className="profile-info">
                     <h2>dimas7080</h2>
                     <p>@dimas7080</p>
@@ -67,26 +73,33 @@ function ProfileCard() {
 
             <form className="post-form" onSubmit={addPost}>
                 <input type="text"
-                placeholder="Заголовок"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}/>
+                    placeholder="Заголовок"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)} />
 
                 <textarea placeholder="Текст поста"
-                value={text}
-                onChange={(e) => setText(e.target.value)}/>
+                    value={text}
+                    onChange={(e) => setText(e.target.value)} />
 
                 <button type="submit">
                     Опубликовать
                 </button>
             </form>
 
-            {posts.map((post)=> (
+            {posts.length > 0 ? (posts.map((post) => (
                 <Post
-                key={post.id}
-                author={post.author}
-                title={post.title}
-                text={post.text}/>
-            ))}
+                    key={post.id}
+                    id={post.id}
+                    author={post.author}
+                    title={post.title}
+                    text={post.text}
+                    onDelete={deletePost} />
+            ))
+            ) : (
+                <p className="empty-message">Опубликуйте первый пост</p>
+            )}
+
+
             {/* <Post author="2" title="Пост 2" text="Текст 2"/>
             <Post author="3" title="Пост 3" text="Текст 3"/> */}
         </section>
