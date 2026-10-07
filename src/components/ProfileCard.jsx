@@ -2,64 +2,64 @@ import { useState } from "react";
 import Post from "./Post";
 
 function ProfileCard() {
-    const [posts, setPosts] = useState([
-        {
-            id: 1,
-            author: "1",
-            title: "Пост 1",
-            text: "Текст 1"
-        },
-        {
-            id: 2,
-            author: "2",
-            title: "Пост 2",
-            text: "Текст 2"
-        },
-        {
-            id: 3,
-            author: "3",
-            title: "Пост 3",
-            text: "Текст 3"
-        },
-        {
-            id: 4,
-            author: "4",
-            title: "Пост 4",
-            text: "Текст 4"
-        },
-        {
-            id: 5,
-            author: "5",
-            title: "Пост 5",
-            text: "Текст 5"
-        }
+    // const [posts, setPosts] = useState([
+    //     {
+    //         id: 1,
+    //         author: "1",
+    //         title: "Пост 1",
+    //         text: "Текст 1"
+    //     },
+    //     {
+    //         id: 2,
+    //         author: "2",
+    //         title: "Пост 2",
+    //         text: "Текст 2"
+    //     },
+    //     {
+    //         id: 3,
+    //         author: "3",
+    //         title: "Пост 3",
+    //         text: "Текст 3"
+    //     },
+    //     {
+    //         id: 4,
+    //         author: "4",
+    //         title: "Пост 4",
+    //         text: "Текст 4"
+    //     },
+    //     {
+    //         id: 5,
+    //         author: "5",
+    //         title: "Пост 5",
+    //         text: "Текст 5"
+    //     }
 
-    ]);
+    // ]);
 
-    const [title, setTitle] = useState('');
-    const [text, setText] = useState("");
+    // const [title, setTitle] = useState('');
+    // const [text, setText] = useState("");
 
-    function addPost(e) {
-        e.preventDefault();
+    // function addPost(e) {
+    //     e.preventDefault();
 
-        const newPost = {
-            id: Date.now(),
-            title: title,
-            text: text,
-            author: "Dima"
-        }
+    //     const newPost = {
+    //         id: Date.now(),
+    //         title: title,
+    //         text: text,
+    //         author: "Dima"
+    //     }
 
-        setPosts([...posts, newPost]);
+    //     setPosts([...posts, newPost]);
 
-        setTitle("");
-        setText("");
-    }
+    //     setTitle("");
+    //     setText("");
+    // }
 
-    function deletePost(id) {
-        setPosts(
-            posts.filter((post) => post.id !== id)
-        );
-    }
+    // function deletePost(id) {
+    //     setPosts(
+    //         posts.filter((post) => post.id !== id)
+    //     );
+    // }
 
     return (
         <section className="profile-card">
@@ -71,7 +71,11 @@ function ProfileCard() {
                 </div>
             </div>
 
-            <form className="post-form" onSubmit={addPost}>
+            <p className="profile-description">
+                (❁´◡`❁)
+            </p>
+
+            {/* <form className="post-form" onSubmit={addPost}>
                 <input type="text"
                     placeholder="Заголовок"
                     value={title}
@@ -97,7 +101,7 @@ function ProfileCard() {
             ))
             ) : (
                 <p className="empty-message">Опубликуйте первый пост</p>
-            )}
+            )} */}
 
 
             {/* <Post author="2" title="Пост 2" text="Текст 2"/>
