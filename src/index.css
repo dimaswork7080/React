@@ -296,3 +296,21 @@ main {
 .delete-button:hover{
   background-color: red;
 }
+
+.navigation{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 10px 0px;
+  margin: 10px 0px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.navigation a{
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #d6d6d6;
+  text-decoration: none;
+  color: black;
+}
