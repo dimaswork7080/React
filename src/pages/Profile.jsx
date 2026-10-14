@@ -1,32 +1,34 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import ProfileCard from "../components/ProfileCard";
 import Post from "../components/Post";
+import { usePosts } from "../context/PostsContext";
 
 function Profile() {
-    const [posts, setPosts] = useState(() => {
-        const savedPosts = localStorage.getItem("posts");
-        if (savedPosts) {
-            return JSON.parse(savedPosts);
-        }
-        return [
-            {
-                id: 1,
-                author: "1",
-                title: "Пост 1",
-                text: "Текст 1"
-            }
-        ];
-    });
+    const { posts, setPosts } = usePosts();
+    // const [posts, setPosts] = useState(() => {
+    //     const savedPosts = localStorage.getItem("posts");
+    //     if (savedPosts) {
+    //         return JSON.parse(savedPosts);
+    //     }
+    //     return [
+    //         {
+    //             id: 1,
+    //             author: "1",
+    //             title: "Пост 1",
+    //             text: "Текст 1"
+    //         }
+    //     ];
+    // });
 
     const [title, setTitle] = useState('');
     const [text, setText] = useState("");
     const [error, setError] = useState("");
 
-    useEffect(() => {
-        console.log("Количество постов", posts.length);
-        localStorage.setItem("posts", JSON.stringify(posts));
-    }, [posts]
-    );
+    // useEffect(() => {
+    //     console.log("Количество постов", posts.length);
+    //     localStorage.setItem("posts", JSON.stringify(posts));
+    // }, [posts]
+    // );
 
     function addPost(e) {
         e.preventDefault();
