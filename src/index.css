@@ -143,6 +143,36 @@ button {
   padding: 40px 20px;
 }
 
+.header.theme-light {
+  background-color: white;
+  color: black;
+}
+
+.app.theme-light {
+  background-color: white;
+  color: black;
+  transition: all 0.2s;
+}
+
+.app.theme-dark {
+  background-color: black;
+  color: white;
+  transition: all 0.2s;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav-link.theme-light {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
 .header h1 {
   margin: 0 0 10px;
   font-size: 32px
@@ -155,7 +185,7 @@ button {
 
 /*main */
 main {
-  max-width:  700px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 40px 20px;
 }
@@ -234,19 +264,22 @@ main {
   cursor: pointer;
   transition: 0.2s;
 }
-.actions button:hover{
+
+.actions button:hover {
   background: white;
   transform: translateY(-2px);
 }
-.actions button:hover{
+
+.actions button:hover {
   background: white;
   transform: translateY(0px);
 }
-.actions button:active{
+
+.actions button:active {
   transform: translateY(0);
 }
 
-.post-form{
+.post-form {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
@@ -256,7 +289,7 @@ main {
   gap: 10px;
 }
 
-.post-form button{
+.post-form button {
   background-color: #dddddd;
   border: 2px solid #999;
   padding: 10px;
@@ -267,37 +300,37 @@ main {
   transition: translate 2s ease;
 }
 
-.post-form button:hover{
+.post-form button:hover {
   background-color: #bebebe;
   transform: translate(100px, 50px);
   transform: scale(2);
   transition: transform 2s ease, background-color 2s ease;
 }
 
-.post-form textarea{
+.post-form textarea {
   resize: none;
   height: 150px;
   border-radius: 10px;
   padding: 5px;
 }
 
-.post-form input{
+.post-form input {
   padding: 10px;
   border: 2px solid #999;
   border-radius: 10px;
 }
 
-.te{
+.te {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.delete-button:hover{
+.delete-button:hover {
   background-color: red;
 }
 
-.navigation{
+.navigation {
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -307,7 +340,7 @@ main {
   border-radius: 10px;
 }
 
-.navigation a{
+.navigation a {
   padding: 10px;
   border-radius: 10px;
   background-color: #d6d6d6;

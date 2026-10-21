@@ -1,5 +1,6 @@
-import { useState } from "react";
-import Post from "./Post";
+// import { useState } from "react";
+// import Post from "./Post";
+import { useUser } from "../context/UserContext";
 
 function ProfileCard() {
     // const [posts, setPosts] = useState([
@@ -60,13 +61,14 @@ function ProfileCard() {
     //         posts.filter((post) => post.id !== id)
     //     );
     // }
+    const {userName} = useUser();
 
     return (
         <section className="profile-card">
             <div className="profile">
                 <img src="src/assets/cat.jpg" alt="" className="avatar"></img>
                 <div className="profile-info">
-                    <h2>dimas7080</h2>
+                    <h2>{userName}</h2>
                     <p>@dimas7080</p>
                 </div>
             </div>
